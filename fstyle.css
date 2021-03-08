@@ -241,7 +241,7 @@ footer {
     position: relative;
     bottom: 0px;
     width: 100%;
-    background: #ffffff3d;
+    background: linear-gradient(90deg, rgb(87 87 87 / 0%) 0%, rgba(254,135,3,1) 14%);
     color: #c7000b;
 }
 
@@ -397,7 +397,7 @@ img {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    box-shadow: 0px 1px 5px 2px #a5a5a533;
+    box-shadow: 0px 1px 5px 2px #c7000b1c;
 }
 
 
@@ -405,11 +405,25 @@ img {
 
 
 /*Section-Proj-Contact*/
-
+.proj{
+    color: #ffc179;margin: 5em 0;
+}
+.proj-center{
+    text-align: center;
+}
+.proj-center h1{
+    font-size: 3em;
+}
+.proj-center p{
+    font-size: 2em;
+}
+.proj-center p a{
+    text-decoration: none;border-bottom: 2px solid #ffc179;color: #fe033a;
+}
 .cntct {
     text-align: center;
     vertical-align: middle;
-    height: 15em;
+    margin: 5em 0;
 }
 
 .cntct #hg1 {
@@ -417,7 +431,7 @@ img {
     color: #ffc179;
     font-family: 'Montserrat';
     font-style: normal;
-    font-size: 4rem;
+    font-size: 3rem;
     letter-spacing: -.03rem;
     font-weight: 700;
     margin-top: 50px;
@@ -425,7 +439,6 @@ img {
 
 .cntct .social-center {
     text-align: center;
-    width: 40%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -437,15 +450,22 @@ img {
 
 .svg-inline--fa {
     font-size: 3em;
-    color: #ffc179;
 }
-
-.svg-inline--fa:focus,
-.svg-inline--fa:hover {
-    color: #485563;
+.fa-facebook{
+    color: #3b5998;
 }
-
-
+.fa-whatsapp{
+    color: #25D366;
+}
+.fa-envelope{
+    color: #ffa500;
+}
+.fa-skype{
+    color: #007ee5;
+}
+.fa-github{
+    color: #fff;
+}
 /*Section-Proj-Contact-end*/
 
 .hrt {
@@ -506,6 +526,9 @@ img {
         margin-left: 0px;
     }
     .cntct #hg1 {
-        font-size: 3em;
+        font-size: 2.2em;
+    }
+    .svg-inline--fa {
+        font-size: 2em;
     }
 }
