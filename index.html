@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="fstyle.css" type="text/css">
+    <link rel="stylesheet" href="./files/aos.css">
+    <link rel="stylesheet" href="./files/custom.css">
+    <script src="./files/fonts/font-all.min.js"></script>
+    <script src="./files/aos.js"></script>
+    <script>
+        function myFunction() {
+
+            var myVar = setTimeout(showPage, 1500);
+        }
+
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("wmain").style.display = "block";
+            document.getElementById("blk").style.background = "url(./files/back-blk.png)";
+            document.getElementById("blk").style.backgroundPosition = "center";
+            document.getElementById("blk").style.backgroundSize = "cover";
+        }
+    </script>
+</head>
+
+<body onload="myFunction()" style="margin:0;" id="blk">
+    <!-- Dev@FaHaD -->
+    <div id="loader"></div>
+    <div id="wmain" class="animate-bottom" style="display: none;">
+        <nav class="navbar">
+            <div class="content">
+                <div class="logo"><a href="#">FaHaD</a></div>
+                <ul class="menu-list">
+                    <div class="icon cancel-btn">
+                        <span class="lgo">&#10006;</span>
+                    </div>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#fabt">About</a></li>
+                    <li><a href="#fform">Contact</a></li>
+                    <li><a href="#fskl">Education</a></li>
+                </ul>
+                <div class="icon menu-btn">
+                    <span class="lgo">&#9776;</span>
+                </div>
+            </div>
+        </nav>
+        <!-- Dev@FaHaD -->
+        <div class="about" id="fabt" data-aos="fade-up">
+            <div class="circle-img"><img src="./files/fahad-circle-web.jpg" class="me" alt="me" data-aos="fade-up"></div>
+            <p id="abt"><span id="quotes">&#10075;&#10075;</span>About me</p>
+            <br>
+            <p id="say" data-aos="fade-up">I'm inter student,i'm not a perfect web developer but always do something that excite me and lot of people<q id="f">  Like You  </q></p>
+        </div>
+
+        <div class="skill" id="fskl">
+            <p id="abt" data-aos="fade-up">My Skills</p>
+            <div class="skill-box">
+                <p data-aos="slide-up">Computer</p>
+                <div class="container">
+                    <div class="pc" data-aos="fade-up">
+                        <p id="sh" data-aos="fade-up">90%</p>
+                    </div>
+                </div>
+
+                <p data-aos="slide-up">Networking</p>
+                <div class="container">
+                    <div class="web" data-aos="fade-up">
+                        <p id="sh" data-aos="fade-up">80%</p>
+                    </div>
+                </div>
+                <!-- Dev@FaHaD -->
+                <p data-aos="slide-up">web designing</p>
+                <div class="container">
+                    <div class="net" data-aos="fade-up">
+                        <p id="sh" data-aos="fade-up">65%</p>
+                    </div>
+                </div>
+
+                <p data-aos="slide-up">Electronic</p>
+                <div class="container">
+                    <div class="elec" data-aos="fade-up">
+                        <p id="sh" data-aos="fade-up">60%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="proj">
+            <div class="proj-center">
+                <h1>Projects</h1>
+
+            </div>
+        </section>
+        <section class="cntct">
+            <h1 id="hg1">Feel free to contact</h1>
+            <div class="social-center">
+                <a href="https://www.facebook.com/fahadgujjar.15090/" target="_blank"><i class="fab fa-facebook"></i></a> <a href="https://wa.link/r2dhrv" target="_blank"><i class="fab fa-whatsapp" ></i></a>
+                <a href="mailto:fahadgujjar4994@gmail.com"><i class="fad fa-envelope"></i></a>
+                <a href="https://join.skype.com/invite/Y5OnwZJcmyjx" target="_blank"><i class="fab fa-skype"></i></a> <a href="https://github.com/fahad15090" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            </div>
+        </section>
+        <footer>
+            <!-- Dev@FaHaD -->
+            <div class="bottom">
+                <center>
+                    <span class="credit">Created with <span class="hrt">&#10084;</span> by <a href="">FaHaD Ali</a></span>
+                </center>
+            </div>
+        </footer>
+        <!-- Dev@FaHaD -->
+        <div>
+            <script src="fscript.js"></script>
+            <script>
+                const body = document.querySelector("body");
+                const navbar = document.querySelector(".navbar");
+                const menuBtn = document.querySelector(".menu-btn");
+                const cancelBtn = document.querySelector(".cancel-btn");
+                menuBtn.onclick = () => {
+                    navbar.classList.add("show");
+                    menuBtn.classList.add("hide");
+                    body.classList.add("disabled");
+                }
+                cancelBtn.onclick = () => {
+                    body.classList.remove("disabled");
+                    navbar.classList.remove("show");
+                    menuBtn.classList.remove("hide");
+                }
+                window.onscroll = () => {
+                    this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+                }
+            </script>
+
+            <script>
+                AOS.init({
+                    disable: false,
+                    duration: 500,
+                    once: false,
+                    easing: 'ease',
+                });
+            </script>
+</body>
+
+</html>

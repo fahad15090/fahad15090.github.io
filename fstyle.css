@@ -1,0 +1,511 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(./files/fonts/Montserrat-Bold.woff)
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    transition: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#blk {
+    padding: 0;
+    margin: 0;
+    background: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+/* custom scroll bar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.075);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c7000b;
+}
+
+::selection {
+    background: #ff48546b;
+}
+
+
+/*dev@FahaD*/
+
+
+/*loader start*/
+
+
+/* Center the loader */
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #ffffff15;
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    border-top: 16px solid #ec4752;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Add animation to "page content" */
+
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+    to {
+        bottom: 0px;
+        opacity: 1
+    }
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+
+/*loader end*/
+
+.lgo span:hover {
+    color: #c7000b;
+}
+
+.content {
+    max-width: 1250px;
+    margin: auto;
+    padding: 0 30px;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+    top: 0;
+}
+
+
+/*dev@FahaD*/
+
+.navbar.sticky {
+    background: #a5a5a53d;
+    backdrop-filter: blur(5px);
+    padding: 15px 0;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #ffc179;
+    font-size: 26px;
+    font-family: 'Montserrat';
+    letter-spacing: .08rem;
+}
+
+.navbar .menu-list {
+    display: inline-flex;
+}
+
+
+/*dev@FahaD*/
+
+.menu-list li {
+    list-style: none;
+}
+
+.menu-list li a {
+    color: #ffc179;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid #ffffff3d;
+    padding: 6px 16px;
+    border-radius: 50px;
+}
+
+.menu-list li a:hover {
+    color: #fff;
+    background: #c7000b;
+    border-color: #ffffff3d;
+    box-shadow: 1px 1px 13px 0px #c7000b;
+    backdrop-filter: blur(5px);
+}
+
+.icon {
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+.icon.menu-btn span {
+    margin-left: -40px;
+}
+
+.icon.cancel-btn {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+
+.navbar.sticky .icon.cancel-btn {
+    top: 10px;
+}
+
+
+/*Nav end*/
+
+#container {
+    text-align: center;
+    margin-top: 110px;
+}
+
+#header {
+    color: #ffc179;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+
+/*dev@FahaD*/
+
+footer {
+    /*dev@FahaD*/
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    background: #ffffff3d;
+    color: #c7000b;
+}
+
+.bottom center {
+    padding: 5px;
+    font-size: 1.9375rem;
+    background: #ffffff3d;
+    backdrop-filter: blur(5px);
+}
+
+.bottom center a {
+    text-decoration: none;
+    color: #c7000b;
+    border-bottom: 6px solid #ffc179;
+}
+
+.bottom center a:hover {
+    border-color: #c7000b;
+}
+
+
+/*dev@FahaD*/
+
+.about {
+    font-size: 32px;
+    margin-bottom: 220px;
+    margin-top: 220px;
+    text-align: center;
+    display: block;
+}
+
+.about #abt {
+    color: #ffc179;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-size: 4rem;
+    letter-spacing: -.03rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+
+/*dev@FahaD*/
+
+#say {
+    font-size: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 48px;
+    color: #ffc179;
+}
+
+#quotes {
+    font-size: 84px;
+    display: inline-block;
+    margin-left: -50px;
+}
+
+#f {
+    font-size: 50px;
+}
+
+.skill {
+    text-align: center;
+    color: #fff;
+    margin-top: 220px;
+    margin-bottom: 220px;
+}
+
+
+/*dev@FahaD*/
+
+.skill #abt {
+    color: #ffc179;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-size: 3rem;
+    letter-spacing: -.03rem;
+    font-weight: 700;
+}
+
+.skill-box {
+    width: 98%;
+    margin-left: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skill-box p {
+    font-size: 24px;
+    color: #ffc179;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container #sh {
+    font-family: 'Montserrat';
+    font-size: 22px;
+    text-align: center;
+    box-shadow: 2px 2px 20px 9px #c7000a23;
+    border-radius: 0.4em;
+}
+
+.pc {
+    width: 90%;
+    background: #c7000b;
+    border-radius: 0.5em;
+    height: 28px;
+    box-shadow: -1px 0px 8px 1px #0000002d;
+}
+
+.web {
+    width: 80%;
+    background: #c7000b;
+    border-radius: 0.5em;
+    height: 28px;
+    box-shadow: -1px 0px 8px 1px #0000002d;
+}
+
+.net {
+    width: 65%;
+    background: #c7000b;
+    border-radius: 0.5em;
+    height: 28px;
+    box-shadow: -1px 0px 8px 1px #0000002d;
+}
+
+.elec {
+    width: 60%;
+    background: #c7000b;
+    border-radius: 0.5em;
+    height: 28px;
+    box-shadow: -1px 0px 8px 1px #0000002d;
+}
+
+img {
+    /*dev@FahaD*/
+    height: 260px;
+    border-radius: 50%;
+    margin: 80px 0 0 0;
+    margin-top: 10px;
+}
+
+.circle-img {
+    border-radius: 50%;
+    background: #ffffff3d;
+    width: 280px;
+    height: 280px;
+    position: relative;
+    margin: 30px auto 20px auto;
+    backdrop-filter: blur(5px);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: 0px 1px 5px 2px #a5a5a533;
+}
+
+
+/*skills end*/
+
+
+/*Section-Proj-Contact*/
+
+.cntct {
+    text-align: center;
+    vertical-align: middle;
+    height: 15em;
+}
+
+.cntct #hg1 {
+    text-align: center;
+    color: #ffc179;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 4rem;
+    letter-spacing: -.03rem;
+    font-weight: 700;
+    margin-top: 50px;
+}
+
+.cntct .social-center {
+    text-align: center;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cntct .social-center a {
+    padding: 0 12px;
+    transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.svg-inline--fa {
+    font-size: 3em;
+    color: #ffc179;
+}
+
+.svg-inline--fa:focus,
+.svg-inline--fa:hover {
+    color: #485563;
+}
+
+
+/*Section-Proj-Contact-end*/
+
+.hrt {
+    color: #c7000b;
+}
+
+@media screen and (max-width: 900px) {
+    .about #abt {
+        font-size: 45px;
+        word-break: break-word;
+    }
+    img {
+        height: 220px;
+    }
+    .circle-img {
+        width: 240px;
+        height: 240px;
+    }
+    .bottom center {
+        padding: 5px;
+        font-size: 1.0375rem;
+    }
+    .icon {
+        display: block;
+    }
+    .icon.cancel-btn {
+        margin-right: 10px;
+    }
+    .icon.hide {
+        display: none;
+    }
+    /*dev@FahaD*/
+    .navbar .menu-list {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        max-width: 400px;
+        left: -100%;
+        top: 0px;
+        display: block;
+        padding: 40px 0;
+        text-align: center;
+        background: #222;
+        transition: all 0.3s ease;
+    }
+    .navbar.show .menu-list {
+        left: 0%;
+    }
+    .navbar .menu-list li {
+        margin-top: 45px;
+    }
+    .navbar .menu-list li a {
+        font-size: 23px;
+        margin-left: -100%;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    .navbar.show .menu-list li a {
+        margin-left: 0px;
+    }
+    .cntct #hg1 {
+        font-size: 3em;
+    }
+}
