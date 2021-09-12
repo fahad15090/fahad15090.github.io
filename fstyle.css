@@ -21,8 +21,7 @@ html {
     background: #000;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    background-position: bottom;
 }
 
 
@@ -241,14 +240,12 @@ footer {
     position: relative;
     bottom: 0px;
     width: 100%;
-    background: linear-gradient(90deg, rgb(87 87 87 / 0%) 0%, rgba(254,135,3,1) 14%);
-    color: #c7000b;
+    background: linear-gradient(200deg, #E52E71, rgb(254, 135, 3) );
 }
 
 .bottom center {
     padding: 5px;
     font-size: 1.9375rem;
-    background: #ffffff3d;
     backdrop-filter: blur(5px);
 }
 
@@ -335,6 +332,10 @@ footer {
     font-size: 24px;
     color: #ffc179;
     font-family: 'Montserrat', sans-serif;
+    animation: blink 3s linear infinite;
+}
+@keyframes blink{
+    50% { opacity: 0; }
 }
 
 .container #sh {
@@ -350,7 +351,9 @@ footer {
     background: #c7000b;
     border-radius: 0.5em;
     height: 28px;
+    position: relative;
     box-shadow: -1px 0px 8px 1px #0000002d;
+    animation: fillup-p 5s ease infinite;
 }
 
 .web {
@@ -358,7 +361,9 @@ footer {
     background: #c7000b;
     border-radius: 0.5em;
     height: 28px;
+    position: relative;
     box-shadow: -1px 0px 8px 1px #0000002d;
+    animation: fillup-w 6s ease infinite;
 }
 
 .net {
@@ -366,7 +371,9 @@ footer {
     background: #c7000b;
     border-radius: 0.5em;
     height: 28px;
+    position: relative;
     box-shadow: -1px 0px 8px 1px #0000002d;
+    animation: fillup-n 7s ease infinite;
 }
 
 .elec {
@@ -374,10 +381,12 @@ footer {
     background: #c7000b;
     border-radius: 0.5em;
     height: 28px;
+    position: relative;
     box-shadow: -1px 0px 8px 1px #0000002d;
+    animation: fillup-e 8s ease infinite;
 }
 
-img {
+.circle-img .profile {
     /*dev@FahaD*/
     height: 260px;
     border-radius: 50%;
@@ -387,29 +396,129 @@ img {
 
 .circle-img {
     border-radius: 50%;
-    background: #ffffff3d;
+    
     width: 280px;
     height: 280px;
     position: relative;
     margin: 30px auto 20px auto;
-    backdrop-filter: blur(5px);
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     box-shadow: 0px 1px 5px 2px #c7000b1c;
+    background: linear-gradient(10deg, #E52E71, rgb(254, 135, 3) );
+    animation: rotate 1s linear infinite ;
+}
+@keyframes rotate{
+    0%{background: linear-gradient(0deg, #E52E71, rgb(254, 135, 3) );
+    }
+    5%{background: linear-gradient(10deg, #E52E71, rgb(254, 135, 3) );
+    }
+    10%{background: linear-gradient(40deg, #E52E71, rgb(254, 135, 3) );
+    }
+    20%{background: linear-gradient(70deg, #E52E71, rgb(254, 135, 3) );
+    }
+    30%{background: linear-gradient(100deg, #E52E71, rgb(254, 135, 3) );
+    }
+    40%{background: linear-gradient(130deg, #E52E71, rgb(254, 135, 3) );
+    }
+    50%{background: linear-gradient(160deg, #E52E71, rgb(254, 135, 3) );
+    }
+    60%{background: linear-gradient(190deg, #E52E71, rgb(254, 135, 3) );
+    }
+    70%{background: linear-gradient(210deg, #E52E71, rgb(254, 135, 3) );
+    }
+    80%{background: linear-gradient(240deg, #E52E71, rgb(254, 135, 3) );
+    }
+    90%{background: linear-gradient(270deg, #E52E71, rgb(254, 135, 3) );
+    }
+    100%{background: linear-gradient(360deg, #E52E71, rgb(254, 135, 3) );
+    }
+}
+@keyframes fillup-p{
+    from{
+        left: -90%;
+    }
+    to{
+        left: 0;
+    }
+} 
+@keyframes fillup-n{
+    from{
+        left: -65%;
+    }
+    to{
+        left: 0;
+    }
+} 
+@keyframes fillup-e{
+    from{
+        left: -60%;
+    }
+    to{
+        left: 0;
+    }
+} 
+@keyframes fillup-w{
+    from{
+        left: -80%;
+    }
+    to{
+        left: 0;
+    }
+} 
+
+/*skills end*/
+/*Magisk Proj*/
+.auto-slider{
+    position: relative;
+    box-sizing: content-box;
+    display: block;
+    background: transparent;
+    max-width: 400px;
+    margin:auto;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
 }
 
 
-/*skills end*/
-
+@keyframes sliding{
+            0%{left: 0%; }
+            20%{left: -100%;}
+            40%{left: -200%;}
+            60%{left: -300%;}
+            80%{left: -400%;}
+            100%{left: 0%;}
+        }        
+              
+        
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 25s sliding ease infinite; 
+}
 
 /*Section-Proj-Contact*/
 .proj{
-    color: #ffc179;margin: 5em 0;
+    color: #ffc179;margin: 5em 0;display: flex;flex-wrap: wrap;justify-content: space-around;overflow-x: hidden;
 }
+
+.Wallpaper{
+    height: 450px;
+}
+.proj .c-left{
+    width: 40%;margin: auto;text-align: center;
+}
+.proj .c-left img{width: 300px;}
 .proj-center{
-    text-align: center;
+    width: 60%;margin: auto;text-align: center;
 }
 .proj-center h1{
     font-size: 3em;
@@ -418,7 +527,7 @@ img {
     font-size: 2em;
 }
 .proj-center p a{
-    text-decoration: none;border-bottom: 2px solid #ffc179;color: #fe033a;
+    text-decoration: none;border-bottom: 2px solid #ffc179;color: #c7000b;animation: blink 3s linear infinite;
 }
 .cntct {
     text-align: center;
@@ -448,36 +557,22 @@ img {
     transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
 }
 
-.svg-inline--fa {
-    font-size: 3em;
-}
-.fa-facebook{
-    color: #3b5998;
-}
-.fa-whatsapp{
-    color: #25D366;
-}
-.fa-envelope{
-    color: #ffa500;
-}
-.fa-skype{
-    color: #007ee5;
-}
-.fa-github{
-    color: #fff;
-}
 /*Section-Proj-Contact-end*/
 
 .hrt {
-    color: #c7000b;
+    color: #c7000b;animation: blink 3s linear infinite;
 }
 
 @media screen and (max-width: 900px) {
+    .proj{display: block;}
+    .proj .c-left{width: 100%;}
+    .proj .c-left img{width: 220px;}
+    .proj .Wallpaper{height: 820px;}
     .about #abt {
         font-size: 45px;
         word-break: break-word;
     }
-    img {
+    .circle-img .profile {
         height: 220px;
     }
     .circle-img {
@@ -527,8 +622,5 @@ img {
     }
     .cntct #hg1 {
         font-size: 2.2em;
-    }
-    .svg-inline--fa {
-        font-size: 2em;
     }
 }
