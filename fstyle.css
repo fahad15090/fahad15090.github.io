@@ -332,7 +332,7 @@ footer {
     font-size: 24px;
     color: #ffc179;
     font-family: 'Montserrat', sans-serif;
-    animation: blink 3s linear infinite;
+    animation: blink 3s cubic-bezier(0.4, 0, 1, 1) infinite;
 }
 @keyframes blink{
     50% { opacity: 0; }
@@ -516,7 +516,7 @@ div#slider figure {
 .proj .c-left{
     width: 40%;margin: auto;text-align: center;
 }
-.proj .c-left img{width: 300px;}
+.proj .c-left img{width: 300px;animation: blink 3s cubic-bezier(0.4, 0, 1, 1) infinite;}
 .proj-center{
     width: 60%;margin: auto;text-align: center;
 }
