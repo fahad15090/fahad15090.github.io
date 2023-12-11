@@ -1,13 +1,17 @@
 @font-face {
-    font-family: 'Montserrat';
-    src: url(./files/fonts/Montserrat-Bold.woff)
+    font-family: 'NovaSquare';
+    src: url(./files/fonts/NovaSquare-Regular.woff)
+}
+@font-face {
+    font-family: 'IBMPlexMono';
+    src: url(./files/fonts/IBMPlexMono-Light.woff)
 }
 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'NovaSquare', sans-serif;
     transition: all 0.3s ease;
 }
 
@@ -27,9 +31,9 @@ html {
 
 /* custom scroll bar */
 
-::-webkit-scrollbar {
+/*::-webkit-scrollbar {
     width: 10px;
-}
+}*/
 
 ::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.075);
@@ -161,8 +165,8 @@ html {
     font-weight: 600;
     text-decoration: none;
     color: #ffc179;
-    font-size: 26px;
-    font-family: 'Montserrat';
+    font-size: 32px;
+    font-family: 'NovaSquare', sans-serif;
     letter-spacing: .08rem;
 }
 
@@ -229,7 +233,7 @@ html {
 #header {
     color: #ffc179;
     font-weight: 700;
-    font-family: sans-serif;
+    font-family: 'NovaSquare', sans-serif;
 }
 
 
@@ -272,7 +276,7 @@ footer {
 
 .about #abt {
     color: #ffc179;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'NovaSquare', sans-serif;
     font-style: normal;
     font-size: 4rem;
     letter-spacing: -.03rem;
@@ -287,8 +291,7 @@ footer {
     font-size: 30px;
     margin-left: 40px;
     margin-right: 40px;
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 48px;
+    font-family: 'IBMPlexMono', sans-serif;
     color: #ffc179;
 }
 
@@ -314,9 +317,9 @@ footer {
 
 .skill #abt {
     color: #ffc179;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'NovaSquare', sans-serif;
     font-style: normal;
-    font-size: 3rem;
+    font-size: 4rem;
     letter-spacing: -.03rem;
     font-weight: 700;
 }
@@ -328,24 +331,12 @@ footer {
     margin-bottom: 20px;
 }
 
-.skill-box p {
-    font-size: 24px;
-    color: #ffc179;
-    font-family: 'Montserrat', sans-serif;
-    animation: blink 3s cubic-bezier(0.4, 0, 1, 1) infinite;
-}
-@keyframes blink{
-    50% { opacity: 0; }
-}
-
 .container #sh {
-    font-family: 'Montserrat';
-    font-size: 22px;
-    text-align: center;
-    box-shadow: 2px 2px 20px 9px #c7000a23;
-    border-radius: 0.4em;
+    font-family: 'IBMPlexMono', sans-serif;
+    font-size: 30px;
+    text-align: center;color: #ffc179;
 }
-
+/*
 .pc {
     width: 90%;
     background: #c7000b;
@@ -384,7 +375,7 @@ footer {
     position: relative;
     box-shadow: -1px 0px 8px 1px #0000002d;
     animation: fillup-e 8s ease infinite;
-}
+}*/
 
 .circle-img .profile {
     /*dev@FahaD*/
@@ -538,7 +529,7 @@ div#slider figure {
 .cntct #hg1 {
     text-align: center;
     color: #ffc179;
-    font-family: 'Montserrat';
+    font-family: 'NovaSquare', sans-serif;
     font-style: normal;
     font-size: 3rem;
     letter-spacing: -.03rem;
@@ -568,9 +559,16 @@ div#slider figure {
     .proj .c-left{width: 100%;}
     .proj .c-left img{width: 220px;}
     .proj .Wallpaper{height: 820px;}
-    .about #abt {
+    .about #abt{
         font-size: 45px;
         word-break: break-word;
+    }
+    .about #say{
+        font-size: 24px;
+    }
+    .container #sh{font-size: 24px;}.proj-center h1{font-size: 34px;}.Wallpaper{height: 800px;}
+    .skill #abt{
+        font-size: 45px;
     }
     .circle-img .profile {
         height: 220px;
